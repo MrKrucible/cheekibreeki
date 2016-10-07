@@ -1,0 +1,573 @@
+@import "compass/css3";
+
+* {
+  box-sizing: border-box;
+  &:focus,
+  &:active,
+  &:focus:active {
+    outline: none;
+  }
+}
+
+  $body-bg: #fff;
+  // social media sharing colors
+  $facebook: #3b5998; // rgb(59, 89, 152)
+  $twitter: #00aced; // rgb(0, 172, 237)
+  $google-plus: #ff4b39; // rgb(221, 75, 57)
+  $pinterest: #cc2127; // rgb(204, 33, 39)
+  $instagram: #784cac; //, rgb(120, 76, 172)
+  $linked-in: #007bb6; // rgb(0, 123, 182)
+
+.column {
+  float: left;
+  padding: 0 15px;
+  width: 50%;
+}
+.set {
+  margin: 20px;
+}
+
+a {
+  &.social {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
+    text-indent: -9999em;
+    visibility: hidden;
+    width: 40px;
+    &:before,
+    &:after {
+      color: $body-bg;
+      content: "";
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: 30px;
+      height: 40px;
+      line-height: 44px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      text-indent: 0;
+      visibility: visible;
+      width: 40px;
+    }
+    &:after {
+      left: 0;
+      position: absolute;
+    }
+  }
+  &.facebook {
+    &:before {
+      background: $facebook;
+    }
+    &:after {
+      content: "\f09a";
+      top: -1px;
+    }
+  }
+  &.twitter {
+    &:before {
+      background: $twitter;
+    }
+    &:after {
+      content: "\f099";
+      left: 0;
+      top: 0;
+    }
+  }
+  &.google-plus {
+    &:before {
+      background: $google-plus;
+    }
+    &:after {
+      content: "\f0d5";
+      left: 2px;
+      top: -1px;
+    }
+  }
+  &.pinterest {
+    &:before {
+      background: $pinterest;
+    }
+    &:after {
+      content: "\f0d2";
+      font-size: 34px;
+      left: -1px;
+      top: -1px;
+    }
+  }
+  &.instagram {
+    &:before {
+      background: $instagram;
+    }
+    &:after {
+      content: "\f16d";
+      top: -1px;
+    }
+  }
+  &.linked-in {
+    &:before {
+      background: $linked-in;
+    }
+    &:after {
+      content: "\f0e1";
+      top: -1px;
+    }
+  }
+}
+
+
+
+
+.squared {
+  a {
+    &.social {
+      &:before {
+        border-radius: 0;
+      }
+    }
+  }
+}
+.rounded {
+  a {
+    &.social {
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+.overflowed {
+  &.rounded {
+    a,
+    a:hover {
+      &.social {
+        &:before {
+          height: 32px;
+          margin: 4px;
+          width: 32px;
+        }
+      }
+      &.facebook {
+        &:after {
+          text-shadow: 0 0 3px $facebook;
+        }
+      }
+      &.twitter {
+        &:after {
+          text-shadow: 0 0 3px $twitter;
+        }
+      }
+      &.google-plus {
+        &:after {
+          text-shadow: 0 0 3px $google-plus;
+        }
+      }
+      &.pinterest {
+        &:after {
+          text-shadow: 0 0 3px $pinterest;
+        }
+      }
+      &.instagram {
+        &:after {
+          text-shadow: 0 0 3px $instagram;
+        }
+      }
+      &.linked-in {
+        &:after {
+          text-shadow: 0 0 3px $linked-in;
+        }
+      }
+    }
+  }
+  a,
+  a:hover {
+    &.social {
+      overflow: visible;
+      &:after {
+        font-size: 46px;
+        line-height: 46px;
+      }
+    }
+    &.facebook {
+      &:after {
+        font-size: 44px;
+      }
+    }
+    &.twitter {
+      &:after {
+        font-size: 50px;
+        left: -4px;
+        top: -1px;
+      }
+    }
+    &.google-plus {
+      &:after {
+        font-size: 43px;
+      }
+    }
+    &.pinterest {
+      &:after {
+        font-size: 50px;
+        left: -2px;
+        top: -2px;
+      }
+    }
+    &.instagram {
+      &:after {
+        font-size: 47px;
+        top: -2px;
+      }
+    }
+    &.linked-in {
+      &:after {
+        font-size: 45px;
+      }
+    }
+  }
+}
+.tilted {
+  a {
+    &.social {
+      &:after {
+        transform: rotate(-7deg);
+        transform-origin: center;
+      }
+    }
+  }
+}
+.raised {
+  a,
+  a:hover {
+    &.social {
+      &:before {
+        display: none;
+      }
+    }
+    &.facebook {
+      &:after {
+        text-shadow: 0 0 3px $facebook, 0 3px 3px $facebook;
+      }
+    }
+    &.twitter {
+      &:after {
+        text-shadow: 0 0 3px $twitter, 0 3px 3px $twitter;
+      }
+    }
+    &.google-plus {
+      &:after {
+        text-shadow: 0 0 3px $google-plus, 0 3px 3px $google-plus;
+      }
+    }
+    &.pinterest {
+      &:after {
+        text-shadow: 0 0 3px $pinterest, 0 3px 3px $pinterest;
+      }
+    }
+    &.instagram {
+      &:after {
+        text-shadow: 0 0 3px $instagram, 0 3px 3px $instagram;
+      }
+    }
+    &.linked-in {
+      &:after {
+        text-shadow: 0 0 3px $linked-in, 0 3px 3px $linked-in;
+      }
+    }
+  }
+}
+
+// start icon modifiers
+.icon-inflate {
+  a {
+    transform: scale(1);
+    transition: all .3s ease-in;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+.icon-rise {
+  a {
+    overflow: visible;
+    transition: all .3s ease-in;
+    &:hover {
+        transform: translateY(-8px);
+    }
+  }
+}
+.icon-tilt {
+  a {
+    transition: all .3s ease-in;
+    &:hover {
+      transform: rotate(-7deg);
+    }
+  }
+}
+// end icon modifiers
+
+// start foreground modifiers
+.fg-rise {
+  a {
+    &:after {
+      transition: all .3s ease-in-out;
+    }
+    &:hover {
+      &:after {
+        transform: translateY(-8px);
+      }
+    }
+  }
+  &.fg-inflate {
+    a {
+      &:after {
+        transform: scale(1) translateY(0);
+        transition: all .3s ease-in-out;
+      }
+      &:hover {
+        &:after {
+          transform: scale(1.4) translateY(-8px);
+        }
+      }
+    }
+  }
+}
+
+.fg-inflate {
+  a {
+    overflow: visible;
+    &:after {
+      transform: scale(1);
+      transition: all .3s ease-in;
+    }
+    &:hover {
+      &:after {
+        transform: scale(1.5);
+      }
+    }
+  }
+  &.fg-tilt {
+    a {
+      &:after {
+        transform: rotate(0deg) scale(1);
+        transition: all .3s ease-in;
+      }
+      &:hover {
+        &:after {
+          transform: rotate(-7deg) scale(1.5);
+        }
+      }
+    }
+  }
+  &:not(.bg-fall) {
+    &:not(.fg-tilt) {
+      a {
+        &.instagram {
+          &:hover {
+            &:after {
+              top: -2px;
+              transform: scale(1.68);
+            }
+          }
+        }
+        &.linked-in {
+          &:hover {
+            &:after {
+              top: -1px;
+              transform: scale(1.60);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fg-color,
+.bg-fade {
+  a {
+    &:after {
+      color: $body-bg;
+      transition: all .3s ease-in-out;
+    }
+    &:hover {
+      &.facebook {
+        &:after {
+          color: $facebook;
+        }
+      }
+      &.twitter {
+        &:after {
+          color: $twitter;
+        }
+      }
+      &.google-plus {
+        &:after {
+          color: $google-plus;
+        }
+      }
+      &.pinterest {
+        &:after {
+          color: $pinterest;
+        }
+      }
+      &.instagram {
+        &:after {
+          color: $instagram;
+        }
+      }
+      &.linked-in {
+        &:after {
+          color: $linked-in;
+        }
+      }
+    }
+  }
+}
+
+.fg-tilt {
+  a {
+    &:after {
+      transition: all .3s ease-in;
+    }
+    &:hover {
+      &:after {
+        transform: rotate(-7deg);
+      }
+    }
+  }
+}
+
+.fg-shadow {
+  a {
+    &:hover {
+      &.facebook {
+        &:after {
+          text-shadow: 0 0 3px $facebook;
+        }
+      }
+      &.twitter {
+        &:after {
+          text-shadow: 0 0 3px $twitter;
+        }
+      }
+      &.google-plus {
+        &:after {
+          text-shadow: 0 0 3px $google-plus;
+        }
+      }
+      &.pinterest {
+        &:after {
+          text-shadow: 0 0 3px $pinterest;
+        }
+      }
+      &.instagram {
+        &:after {
+          text-shadow: 0 0 3px $instagram;
+        }
+      }
+      &.linked-in {
+        &:after {
+          text-shadow: 0 0 3px $linked-in;
+        }
+      }
+    }
+  }
+}
+
+// end foreground modifiers
+
+// start background modifiers
+.bg-fall {
+  a {
+    overflow: visible;
+    perspective: 40px;
+    position: relative;
+    &:before {
+      transform: rotateX(0deg);
+      transform-origin: center 44px;
+      transform-style: preserve-3d;
+      transition: all .3s ease-in-out;
+    }
+    &:hover {
+      &:before {
+        transform: rotateX(90deg);
+      }
+      &.facebook {
+        &:before {
+          background: linear-gradient(top, transparent, rgba($facebook, .7));
+        }
+      }
+      &.twitter {
+        &:before {
+          background: linear-gradient(top, transparent, rgba($twitter, .7));
+        }
+      }
+      &.google-plus {
+        &:before {
+          background: linear-gradient(top, transparent, rgba($google-plus, .7));
+        }
+      }
+      &.pinterest {
+        &:before {
+          background: linear-gradient(top, transparent, rgba($pinterest, .7));
+        }
+      }
+      &.instagram {
+        &:before {
+          background: linear-gradient(top, transparent, rgba($instagram, .7));
+        }
+      }
+      &.linked-in {
+        &:before {
+          background: linear-gradient(top, transparent, rgba($linked-in, .7));
+        }
+      }
+    }
+  }
+}
+
+.bg-shrink {
+  a {
+    &:before {
+      transform: scale(1);
+      transition: all .3s ease-in;
+    }
+    &:hover {
+      &:before {
+        transform: scale(0);
+      }
+    }
+  }
+}
+
+.bg-tilt {
+  a {
+    overflow: visible;
+    &:before {
+      transition: all .3s ease-in;
+    }
+    &:hover {
+      &:before {
+        transform: rotate(-7deg);
+      }
+    }
+  }
+}
+
+.bg-fade {
+  a {
+    &:before {
+      transition: all .3s ease-in;
+    }
+    &:hover {
+      &:before {
+        background: $body-bg;
+      }
+    }
+  }
+}
+// end background modifiers

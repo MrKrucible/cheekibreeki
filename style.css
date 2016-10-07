@@ -1,0 +1,47 @@
+html {
+  background-color: black;
+  text-align: center;
+  font-family: "Roboto";
+}
+
+p {
+  position: sticky;
+  z-index: 5;
+  color: white;
+}
+
+body {
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  float:center;
+}
+
+#share-buttons img {
+  z-index: 5;
+  position: sticky;
+  width: 45px;
+  padding: 10px;
+  border: 0;
+}
+
+strong {
+  padding-top: 10px;
+}
+
+.videoContainer
+{
+  z-index: 1;
+}
+
+.videoContainer video
+{
+  position: sticky;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1%;
+  min-height: 1%;
+  z-index: 1;
+}
